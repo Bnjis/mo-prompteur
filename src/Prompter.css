@@ -1,0 +1,72 @@
+/* .prompterView {
+  background-color: #000;
+} */
+div.prompter {
+  width: 100%;
+}
+.prompWrap.starwars {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 1200px;
+  margin: 0 0 0 -600px;
+  top: auto;
+  bottom: 0;
+  height: 50em;
+  /* cosmétique */
+  color: #ffff66;
+  font-size: 64px;
+  text-align: justify;
+  /* Applique la transformation  */
+  transform-origin: center bottom;
+  transform: perspective(300px) rotateX(25deg);
+}
+.prompWrap.starwars > div {
+  /* positionne la div en bas de l'écran (non visible) */
+  /* l'animation la fait remonter progressivement */
+  position: absolute;
+  top: 100%;
+  animation-duration: 50s;
+  animation-name: crawl;
+  animation-timing-function: linear;
+}
+@keyframes crawl {
+  0% {
+    top: 100%;
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1; /* disparition progressive à la fin */
+  }
+
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
+.prompterView .buttonwrap {
+  position: fixed;
+  top: 5px;
+  left: 50%;
+
+  width: 100px;
+  margin-left: -50px;
+
+  z-index: 100;
+}
+.prompterView .buttonwrap button.swbutton {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.prompterView .buttonwrap audio {
+  display: none;
+}
+div.prompter.mirror {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}

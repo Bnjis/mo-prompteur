@@ -1,0 +1,41 @@
+form {
+  width: 100%;
+}
+
+input {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+input[type="range"] {
+  padding: 0;
+}
+textarea {
+  resize: none;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 500px;
+
+  border: none;
+  background-color: #fff;
+
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+textarea.mirror {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
